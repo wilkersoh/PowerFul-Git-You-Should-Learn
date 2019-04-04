@@ -23,7 +23,7 @@ Modified | Staging | Commited
 * git reset 34cs322 --hard 就會更改資料 然後commit那些在34cs322之後也被刪了
 
 ``` bash 
---commit 1 ----commit 2 ------------------------------------------------merge commit
+--commit 1 ----commit 2 ---------------------------------------------------merge commit
                          \                                           /
                           \         /* Feature branch */            /
                            \---commit 1----commit2-----commit 3----/
@@ -39,6 +39,12 @@ Modified | Staging | Commited
  ### Merge Branch！
  *如果merge A 文件和 B文件起衝突的話就要需要去看下Visual Code里看下 和選擇
  * git merge nameBranch - 那樣就會把newBranch的commit也和master結合了，在newBranch寫的文件也會出現了
+ 
+ ### 上傳到Github，和設置以後更改也能快速更新
+ $ git push URL From Your Repository master -master是代表上傳master的  
+ 上傳后，以後也需要更改資料 ，你不會像每次都輸入 URL一遍又一遍吧
+ $ git remote add origin URL -設置遠端連接 Github的default alias是origin
+ $ git push origin master 
 
                             
 
