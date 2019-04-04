@@ -47,7 +47,7 @@ Modified | Staging | Commited
  ``` bash
  $ git push URL From Your Repository master
  ```
- 上傳后，以後也需要更改資料 ，你不會像每次都輸入 URL一遍又一遍吧
+ 上傳后，以後也需要更改資料 ，你不會像每次都輸入 URL 一遍又一遍吧
  -設置遠端連接 Github default alias是origin
  ``` bash
  $ git remote add origin URL 
@@ -63,29 +63,32 @@ $ git commit -m "updated weather api"
 ```
 檢查
 ``` bash
-git remote -v
+$ git remote -v
 ```
 上傳commit的資料去Gtihub，因為它clone資料下來就有記錄下了
 ``` bash
-git push origin master
+$ git push origin master
 ```
-工作上需要的Share github資料，當你clone下那文件后 :fire:
-老闆叫你做些更改，但你上傳資料去Github，不會去merge 資料的文件，不然之前的code可能還比你的還好呢，亂亂merge不就是死掉嗎
+### 合作完成專案 需要使用的技能
+工作上需要的給同事看你code，他們覺得code沒問題才讓你merge之前的文件
+當你clone下那文件后 :fire:
+老闆叫你做些更改，當你上傳資料去Github，不會去merge 之前資料的文件，不然之前的code可能還比你的還好呢，亂亂merge不就是死掉嗎
 ``` bash
 $ git pull origin master
 $ git checkout -b index-html
 ```
-上面步驟是做個newBranch，把你要寫的code寫在裡面
+上面步驟是做個newBranch叫做index-html，把你要寫的code寫在裡面
 然後在上傳這個 index-html的 newBranch去 Github
 ```
 $ git add .
 $ git commit -m "porfolio html code"
 $ git push origin index-html
 ```
+大概就那樣把~可以登錄進去Github看看，它上傳后長什麼樣子
 
 
 
-
+-----------------------------------------
                             
 
 ### Multiple SSH KEY Git Bash Window
