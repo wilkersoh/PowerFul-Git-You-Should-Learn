@@ -1,5 +1,48 @@
+# Git 笔记
+``` bash
+         |         |
+Modified | Staging | Commited
+         |         |
+         |         |
+         |         |
+         |         |
+         |         |
+         |         |
+         |         |
+```        
+### 基礎操作
+* git add . 
+* git status
+* git commit -m "寫入詳細的更改，方便以後更改回來的時候，清楚這是哪裡被更改"
+* git log 可以查出history commit的資料
+* git log --oneline 簡寫版的 history資料
+* git checkout 751401d - 使用這個版本之前commit的資料
+* git checkout master 
+* git revert abbc091
+* git reset 34cs322 - 跑回去 34cs322 那時的file沒改變 但是在commit stage里 它之後的都還沒commit
+* git reset 34cs322 --hard 就會更改資料 然後commit那些在34cs322之後也被刪了
+
+``` bash 
+--commit 1 ----commit 2 ------------------------------------------------merge commit
+                         \                                           /
+                          \         /* Feature branch */            /
+                           \---commit 1----commit2-----commit 3----/
+ ```
+ ### Create另外一個 Branch
+ * git branch nameBranch - create另一個 branch
+ * git checkout nameBranch - 跑去nameBranch 之前是(master)
+ * git checkout master - 跑去master，然後newBranch的時，寫的文件會消失，他是屬於newBranch的
+ * git branch -d nameBranch -刪除branch，也刪除了newBranch里創建的資料,除非merge它
+ * git branch -a -檢查有多少個branch
+ * git checkout -b nameBranch - create另一個branch 然後跑過去 
+ 
+ ### Merge Branch！
+ *如果merge A 文件和 B文件起衝突的話就要需要去看下Visual Code里看下 和選擇
+ * git merge nameBranch - 那樣就會把newBranch的commit也和master結合了，在newBranch寫的文件也會出現了
+
+                            
+
 ### Multiple SSH KEY Git Bash Window
-#教学
 先產生 SSH KEY - ssh-keygen -t rsa -b 4096 -C "emailAdress@hotmail.com"
 ##### 彈出來的 資料 一定要 更改 folder名 不然 它會覆蓋你之前的 ssh key file
 ``` bash
