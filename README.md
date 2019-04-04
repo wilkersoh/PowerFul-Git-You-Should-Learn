@@ -1,10 +1,11 @@
 # Git 笔记
 ``` bash
          |         |
-Modified | Staging | Commited
+Modified | Staging |   Commited
          |         |
-         |         |
-         |         |
+         |  after  |     after
+         | git add |   git commit
+         |    .    | -m "description"
          |         |
          |         |
          |         |
