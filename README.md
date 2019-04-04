@@ -40,11 +40,51 @@ Modified | Staging | Commited
  *如果merge A 文件和 B文件起衝突的話就要需要去看下Visual Code里看下 和選擇
  * git merge nameBranch - 那樣就會把newBranch的commit也和master結合了，在newBranch寫的文件也會出現了
  
+ -------------------------------
+ 
  ### 上傳到Github，和設置以後更改也能快速更新
- $ git push URL From Your Repository master -master是代表上傳master的  
+ -master是代表上傳master的 
+ ``` bash
+ $ git push URL From Your Repository master
+ ```
  上傳后，以後也需要更改資料 ，你不會像每次都輸入 URL一遍又一遍吧
- $ git remote add origin URL -設置遠端連接 Github的default alias是origin
+ -設置遠端連接 Github default alias是origin
+ ``` bash
+ $ git remote add origin URL 
  $ git push origin master 
+ ```
+ 
+#### 第二個方法
+當從Github Clone文件下來，執行的方法能使用這個，記得過後要進入那個文件夾
+在當前文件做了更改想要上傳到Github 不必使用第一方法了
+``` bash
+$ git add .
+$ git commit -m "updated weather api"
+```
+檢查
+``` bash
+git remote -v
+```
+上傳commit的資料去Gtihub，因為它clone資料下來就有記錄下了
+``` bash
+git push origin master
+```
+工作上需要的Share github資料，當你clone下那文件后 :fire:
+老闆叫你做些更改，但你上傳資料去Github，不會去merge 資料的文件，不然之前的code可能還比你的還好呢，亂亂merge不就是死掉嗎
+``` bash
+$ git pull origin master
+$ git checkout -b index-html
+```
+上面步驟是做個newBranch，把你要寫的code寫在裡面
+然後在上傳這個 index-html的 newBranch去 Github
+```
+$ git add .
+$ git commit -m "porfolio html code"
+$ git push origin index-html
+```
+
+
+
 
                             
 
