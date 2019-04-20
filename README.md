@@ -1,17 +1,21 @@
 # Git 笔记
 ``` bash
-         |         |
-Modified | Staging |   Commited
-         |         |
-         |  after  |     after
-         | git add |   git commit
-         |    .    | -m "description"
-         |         |
-         |         |
-         |         |
-         |         |
+           |         |
+Modified   | Staging |    Commited     |   Push to Remote
+           |         |                 |
+  working  |  after  |     after       |     git push
+ directory | git add |   git commit    |     
+           |    .    | -m "description"|
+           |         |                 |
+           |         |                 |
+           |         |                 |
+           |         |                 |
+               vvv          vvv                  vvv
+//         index/staging    HEAD      Github-origin / heroku-heroku
 ```        
+
 ### 基礎操作
+* git clone SSH-URL
 * git add . 
 * git status
 * git commit -m "寫入詳細的更改，方便以後更改回來的時候，清楚這是哪裡被更改"
@@ -30,6 +34,7 @@ Modified | Staging |   Commited
                            \---commit 1----commit2-----commit 3----/
  ```
  ### Create另外一個 Branch
+ * git pull -更新remote的资料，拉remote里的资料过来，如果remote里和现在不同
  * git branch nameBranch - create另一個 branch
  * git checkout nameBranch - 跑去nameBranch 之前是(master)
  * git checkout master - 跑去master，然後newBranch的時，寫的文件會消失，他是屬於newBranch的
@@ -87,7 +92,15 @@ $ git push origin index-html
 ```
 大概就那樣把~可以登錄進去Github看看，它上傳后長什麼樣子
 
-
+ ### 也能在Github里创建多个branch
+ <p>就先create new branch，然后在newBranch里 push它</p>
+ <p>要回去主要的branch再输入，回去master branch</p>
+ *git checkout master
+ <p>要把newBranch和master结合，也能够在bash处理,记得要在master位子上处理这</p>
+ ``` bash
+ git merge newBrachName
+ git push 
+ ```
 
 -----------------------------------------
 
