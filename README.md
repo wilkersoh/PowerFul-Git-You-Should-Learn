@@ -200,6 +200,16 @@ git clone github clone key
 <p>After commit those file</p>
 *  $ ssh-add ~/.ssh/id_rsa 
 
+### 查看自己现有的SSH key
+* 直接 在 git bash 里面 第一层 cat ~/.ssh/id_rsa.pub
+
+``` bash
+1. cd ~/.ssh
+2. vim id_rsa.pub || cat id_rsa.pub
+```
+
+-----------------------------------
+
 
 # else
 ### git cmd :rocket:
